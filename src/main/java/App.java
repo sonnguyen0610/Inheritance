@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        System.out.print("Input Type (0. Visiting /1. Official: ");
 //        int type = sc.nextInt();
@@ -24,15 +24,15 @@ public class App {
 //        Lecturer.printListLec(inputViLec, inputOfLec);
 
 
-        Lecturer[] list = {
-                new VisitingLecturer("Son", "son@g.c", "tphcm", "0123456788", 40, "Crosstech"),
-                new VisitingLecturer("Son", "son@g.c", "tphcm", "0123456788", 40, "Crosstech")
-
-        };
-        //Xuất danh sách thông tin toàn bộ giảng viên
-        for (Lecturer lec : list) {
-            System.out.println(lec);
-        }
-
-    }
+//        Lecturer[] list = {
+//                new VisitingLecturer("Son", "son@g.c", "tphcm", "0123456788", 40, "Crosstech"),
+//                new VisitingLecturer("Son", "son@g.c", "tphcm", "0123456788", 40, "Crosstech")
+//
+//        };
+//        //Xuất danh sách thông tin toàn bộ giảng viên
+//        for (Lecturer lec : list) {
+//            System.out.println(lec);
+//        }
+//
+//    }
 }
