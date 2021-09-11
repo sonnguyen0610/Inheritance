@@ -14,8 +14,8 @@ public class VisitingLecturer extends Lecturer {
 
     //Nhap 1 giao vien thinh giang
     @Override
-    public void inputInforLecturers() {
-        super.inputInforLecturers();
+    public void inputInforLecturer() {
+        super.inputInforLecturer();
         Scanner sc = new Scanner(System.in);
         System.out.print("Input work place: ");
         this.workPlace = sc.nextLine();
@@ -24,6 +24,13 @@ public class VisitingLecturer extends Lecturer {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("VisitingLecturer{");
+        super.getLecString(sb);
+        sb.append(", workPlace='").append(workPlace).append('\'');
+        sb.append(", salary='").append(salaryPerHour).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+    protected void getLecString(StringBuilder sb){
         sb.append("name='").append(name).append('\'');
         sb.append(", email='").append(email).append('\'');
         sb.append(", address='").append(address).append('\'');
@@ -31,8 +38,6 @@ public class VisitingLecturer extends Lecturer {
         sb.append(", teachingHourPerMonth=").append(teachingHourPerMonth);
         sb.append(", workPlace='").append(workPlace).append('\'');
         sb.append(", salary='").append(salaryPerHour).append('\'');
-        sb.append('}');
-        return sb.toString();
     }
 
     //Nhap ds giao vien thinh giang
@@ -41,7 +46,7 @@ public class VisitingLecturer extends Lecturer {
         for (int i = 0; i < n; i++) {
             System.out.print("Lecture " + (i + 1) + ": ");
             list[i] = new VisitingLecturer();
-            list[i].inputInforLecturers();
+            list[i].inputInforLecturer();
         }
         return list;
     }
@@ -53,4 +58,7 @@ public class VisitingLecturer extends Lecturer {
             System.out.println(list[i].toString());
         }
     }
+//    public int sumSalary (){
+//
+//    }
 }

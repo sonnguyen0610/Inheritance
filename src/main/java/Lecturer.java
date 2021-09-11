@@ -22,16 +22,19 @@ public class Lecturer {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Lecturer{");
-        sb.append("Name='").append(name).append('\'');
+        this.getLecString(sb);//hàm trong lớp
+        sb.append('}');
+        return sb.toString();
+    }
+    protected void getLecString(StringBuilder sb){
+        sb.append("name='").append(name).append('\'');
         sb.append(", email='").append(email).append('\'');
         sb.append(", address='").append(address).append('\'');
         sb.append(", phone=").append(phone);
         sb.append(", teachingHourPerMonth=").append(teachingHourPerMonth);
-        sb.append('}');
-        return sb.toString();
     }
 
-    public void inputInforLecturers() {
+    public void inputInforLecturer() {
         Scanner sc=new Scanner(System.in);
         System.out.print("Input Name:");
         this.name=sc.nextLine();
@@ -46,6 +49,7 @@ public class Lecturer {
     }
     //In danh sach giao vien
     public static void printListLec(VisitingLecturer[] listVisiting, OfficialLecturer[]listOfficial) {
+
         for (int i = 0; i < listVisiting.length; i++) {
             System.out.println("Visiting Lecture " + (i + 1));
             System.out.println(listVisiting[i].toString());

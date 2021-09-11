@@ -1,33 +1,29 @@
 import java.util.Scanner;
 
 public class OfficialLecturer extends  Lecturer{
-    private double wageAgreement; //lương thỏa thuận
+    private double salary; //lương thỏa thuận
     private static final int hourGeneralPerMonth=40; // số giờ quy định trong tháng
     public OfficialLecturer() {
 
     }
     public OfficialLecturer(String name, String email, String address, String phone, float teachingHourPerMonth,double wageAgreement) {
         super(name, email, address, phone, teachingHourPerMonth);
-        this.wageAgreement=wageAgreement;
+        this.salary =wageAgreement;
     }
 
     @Override
-    public void inputInforLecturers() {
-        super.inputInforLecturers();
+    public void inputInforLecturer() {
+        super.inputInforLecturer();
         Scanner sc=new Scanner(System.in);
         System.out.print("Input wage Agreement: ");
-        this.wageAgreement=sc.nextDouble();
+        this.salary =sc.nextDouble();
     }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("OfficialLecturer{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", email='").append(email).append('\'');
-        sb.append(", address='").append(address).append('\'');
-        sb.append(", phone=").append(phone);
-        sb.append(", teachingHourPerMonth=").append(teachingHourPerMonth);
-        sb.append(", wageAgreement=").append(wageAgreement);
+        super.getLecString(sb);
+        sb.append(", salary=").append(salary);
         sb.append(", hourGeneralPerMonth=").append(hourGeneralPerMonth);
         sb.append('}');
         return sb.toString();
@@ -39,7 +35,7 @@ public class OfficialLecturer extends  Lecturer{
         for (int i = 0; i < n; i++) {
             System.out.print("Lecture " + (i + 1) + ": ");
             list[i] = new OfficialLecturer();
-            list[i].inputInforLecturers();
+            list[i].inputInforLecturer();
         }
         return list;
     }
@@ -51,4 +47,7 @@ public class OfficialLecturer extends  Lecturer{
             System.out.println(list[i].toString());
         }
     }
+//    public int SumSalary (){
+////        int bonus=this.teachingHourPerMonth>this.
+//    }
 }
