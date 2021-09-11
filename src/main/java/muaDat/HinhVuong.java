@@ -28,6 +28,6 @@ public class HinhVuong extends InforDat {
         this.point = sc.nextInt();
         System.out.print("Nhap gia dat");
         int gia1m = sc.nextInt();
-        this.gia = gia1m * chieuRong;
+        this.gia = gia1m * chieuRong*chieuRong;
     }
 }
