@@ -38,6 +38,10 @@ public class HinhTamGiac extends InforDat {
         return sb.toString();
     }
 
+    public int giaDat(int gia1m) {
+        return (int) (gia1m * area());
+    }
+
     public void input() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap dinh 1: ");
@@ -48,6 +52,6 @@ public class HinhTamGiac extends InforDat {
         this.point = sc.nextInt();
         System.out.print("Nhap gia dat");
         int gia1m = sc.nextInt();
-        this.gia = (int) (gia1m * area());
+        this.gia = giaDat(gia1m);
     }
 }

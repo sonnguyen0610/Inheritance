@@ -21,6 +21,10 @@ public class HinhChuNhat extends InforDat {
         return sb.toString();
     }
 
+    public int giaDat(int gia1m) {
+        return this.chieuDai * this.chieuRong * gia1m;
+    }
+
     public void input() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap chieu dai: ");
@@ -31,6 +35,6 @@ public class HinhChuNhat extends InforDat {
         this.point = sc.nextInt();
         System.out.print("Nhap gia dat");
         int gia1m = sc.nextInt();
-        this.gia = chieuDai * chieuRong * gia1m;
+        this.gia = giaDat(gia1m);
     }
 }

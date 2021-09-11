@@ -23,6 +23,10 @@ public class HinhTron extends InforDat {
         return sb.toString();
     }
 
+    public int giaDat(int gia1m) {
+        return (int) (gia1m * (this.banKinh + this.banKinh) * (this.banKinh + this.banKinh) * Math.PI);
+    }
+
     public void input() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap tam: ");
@@ -31,7 +35,7 @@ public class HinhTron extends InforDat {
         this.banKinh = sc.nextInt();
         System.out.print("Nhap gia dat");
         int gia1m = sc.nextInt();
-        this.gia = (int) (gia1m * (banKinh + banKinh) * (banKinh + banKinh) * Math.PI);
+        this.gia = giaDat(gia1m);
     }
 
 }

@@ -16,7 +16,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap 1: Them tt manh dat hcn\n" +
                 "Nhap 2:Them tt manh dat hinh vuong\n" +
-                "Nhap 3: Them tt manh dat hinh tron\n " +
+                "Nhap 3: Them tt manh dat hinh tron\n" +
                 "Nhap 4: Them tt manh dat hinh tam giac");
         int option = sc.nextInt();
         if (option == 1) {

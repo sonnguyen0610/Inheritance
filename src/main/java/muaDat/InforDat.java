@@ -31,4 +31,7 @@ public class InforDat {
     }
     public void input() {
     }
+    public int giaDat(int gia1m){
+        return gia1m;
+    }
 }
